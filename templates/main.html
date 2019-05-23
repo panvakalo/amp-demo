@@ -185,21 +185,23 @@ limitations under the License.
   <div id="container">
     <div class="mdl-grid">
     {% for item in items %}
-          <div class="card float-left overflow-hidden">
-            <div class="position-relative full-width full-height">
-              <div class="full-width text-align-center">
-                <amp-img src="{{ item.img_url }}" width=189 height=164></amp-img>
-              </div>
-              <br>
-              <span>{{ item.title }}</span>
-              <br>
-              <div class="full-width position-absolute position-absolute__bottom position-absolute__right">
-                <div class="bold text-align-right price">
-                  {{ item.price }}
+          <a href={{"".join(['https://pwa-qas.vidaxl.nl/e/',item.ean ])}}>
+            <div class="card float-left overflow-hidden">
+              <div class="position-relative full-width full-height">
+                <div class="full-width text-align-center">
+                  <amp-img src="{{ item.img_url }}" width=189 height=164></amp-img>
+                </div>
+                <br>
+                <span>{{ item.title }}</span>
+                <br>
+                <div class="full-width position-absolute position-absolute__bottom position-absolute__right">
+                  <div class="bold text-align-right price">
+                    {{ item.price }}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
       {% endfor %}
     </div>
   </div>
