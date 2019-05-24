@@ -1,0 +1,11 @@
+service: ampdemo
+runtime: python
+threadsafe: true
+env: flex
+entrypoint: gunicorn -b :$PORT main:app
+
+network:
+  name: default
+  subnetwork_name: lan-gcloud-west1
+  instance_tag: ampdemo
+
